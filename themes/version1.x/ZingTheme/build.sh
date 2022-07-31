@@ -126,7 +126,7 @@ compatibility() {
 print "Checking if the addon is compatible with your panel..."
 
 sleep 2
-if [ "$PANEL_VERSION" == "1.6.6" ] || [ "$PANEL_VERSION" == "1.7.0" ]; then
+if [ "$PANEL_VERSION" == "1.6.6" ] || [ "$PANEL_VERSION" == "1.10.0" ]; then
     print "Compatible Version!"
   else
     print_error "Incompatible Version!"
@@ -205,19 +205,19 @@ print_warning "This process takes a few minutes, please do not cancel it."
 
 if [ -d "$PTERO/node_modules" ]; then
     yarn --cwd $PTERO add @emotion/react
-    yarn --cwd $PTERO build:production
+    #yarn --cwd $PTERO build:production
   else
     npm i -g yarn
     yarn --cwd $PTERO install
     yarn --cwd $PTERO add @emotion/react
-    yarn --cwd $PTERO build:production
+    #yarn --cwd $PTERO build:production
 fi
 }
 
 bye() {
 print_brake 50
 echo
-echo -e "${GREEN}* The theme ${YELLOW}Zing Theme${GREEN} was successfully installed."
+echo -e "${GREEN}* The theme ${YELLOW}Zing Theme${GREEN} was successfully installed. You should check it first."
 echo -e "* A security backup of your panel has been created."
 echo -e "* Thank you for using this script."
 echo -e "* Support group: ${YELLOW}$(hyperlink "$SUPPORT_LINK")${RESET}"
