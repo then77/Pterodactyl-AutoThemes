@@ -129,7 +129,7 @@ sleep 2
 if [ "$PANEL_VERSION" == "1.6.6" ] || [ "$PANEL_VERSION" == "1.7.0" ]; then
     print "Compatible Version!"
   else
-    print_error "Incompatible Version!"
+    print "Incompatible Version, but rather i like to skip it!"
 fi
 }
 
